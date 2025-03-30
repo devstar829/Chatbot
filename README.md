@@ -1,7 +1,7 @@
 # Chatbot Application
 
-![Desktop View](./path-to-image/desktop-view.png)
-![Mobile View](./path-to-image/mobile-view.png)
+![Desktop View](./Desktop.png)
+![Mobile View](./Mobile.png)
 
 This is a simple chatbot application built with a **React frontend** and a **FastAPI backend**. The chatbot provides predefined responses to user inputs and demonstrates a basic full-stack implementation.
 
