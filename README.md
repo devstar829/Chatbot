@@ -1,7 +1,5 @@
 # Chatbot Application
-
-![Desktop View](./Desktop.png)
-![Mobile View](./Mobile.png)
+https://www.loom.com/share/1c9a168b2ed8436bb2a07502c7ada51e
 
 This is a simple chatbot application built with a **React frontend** and a **FastAPI backend**. The chatbot provides predefined responses to user inputs and demonstrates a basic full-stack implementation.
 
