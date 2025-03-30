@@ -6,30 +6,30 @@ const MessageInput = ({ sendMessage }) => {
   const handleSendClick = () => {
     if (message.trim()) {
       sendMessage(message);
-      setMessage(''); // Clear the input field after sending
+      setMessage('');
     }
   };
 
   const handleEnterKey = (e) => {
-    if (e.key === 'Enter' && message.trim()) {
-      sendMessage(message);
-      setMessage(''); // Clear the input field after sending
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      handleSendClick();
     }
   };
 
   return (
-    <div className="flex items-center gap-4 mt-4 bg-white p-4 rounded-xl shadow-md border border-gray-300">
-      <input
-        type="text"
+    <div className="flex items-center gap-4 p-4 border-t border-gray-300">
+      <textarea
         value={message}
         onChange={(e) => setMessage(e.target.value)}
         onKeyDown={handleEnterKey}
-        className="flex-1 p-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-500 text-gray-800"
+        className="flex-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
         placeholder="Type your message..."
+        rows={1}
       />
       <button
         onClick={handleSendClick}
-        className="px-6 py-3 bg-blue-600 text-white rounded-full shadow-md hover:bg-blue-700 transition duration-200"
+        className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition"
       >
         Send
       </button>
